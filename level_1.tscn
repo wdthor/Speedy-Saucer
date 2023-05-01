@@ -17,5 +17,10 @@ position = Vector2(210, 179)
 [node name="Player2" parent="." instance=ExtResource("2_der11")]
 position = Vector2(462, 112)
 
+[node name="Sprite2D" parent="Player2" index="0"]
+scale = Vector2(2, 2)
+
 [node name="Player3" parent="." instance=ExtResource("2_der11")]
 position = Vector2(492, 329)
+
+[editable path="Player2"]
