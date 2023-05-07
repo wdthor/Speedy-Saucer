@@ -1,20 +1,12 @@
 extends RigidBody2D
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	# apply_impulse(Vector2(100, -155))
-	var age = "young"
-	if age == "young":
-		print("You are young")
-	elif(age == "adult"):
-		print("You are an adult")
-	else:
-		print("I don't know your age")		
-	
-
-func _process(delta):
-	pass
-
 func _physics_process(delta):
-	apply_force(Vector2(50, 50))
+	var force = 500
+	if Input.is_action_pressed("move_right"):
+		apply_force(Vector2(force,0))
+	if Input.is_action_pressed("move_left"):
+		apply_force(Vector2(-force,0))
+	if Input.is_action_pressed("move_up"):
+		apply_force(Vector2(0,-force))
+	if Input.is_action_pressed("move_down"):
+		apply_force(Vector2(0,force))
