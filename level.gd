@@ -5,3 +5,7 @@ extends Node2D
 func _ready():
 	var greeting = "Hello Godot !"
 	print(greeting)
+
+
+func _on_maze_body_exited(body):
+	get_tree().reload_current_scene()
